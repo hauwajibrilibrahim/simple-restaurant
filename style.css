@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia, serif";
+  color: #333;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  background-color: #d35400;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+a:hover {
+  background-color: rgb(255, 105.7298578199, 7);
+}
+
+nav.navbar {
+  background-color: #d35400;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.navbar .container .logo {
+  font-size: 1.8rem;
+  color: white;
+}
+nav.navbar .container .nav-links {
+  list-style: none;
+  display: flex;
+}
+nav.navbar .container .nav-links li {
+  margin-left: 20px;
+}
+nav.navbar .container .nav-links li a {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    display: none;
+  }
+  .navbar.active .nav-links {
+    display: flex;
+  }
+}
+header.hero {
+  height: 100vh;
+  background: url("assets/hero-image.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+header.hero .hero-content {
+  max-width: 600px;
+}
+header.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+header.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.menu-section {
+  padding: 50px 20px;
+  background-color: white;
+  text-align: center;
+}
+.menu-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #d35400;
+}
+.menu-section .menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+.menu-section .menu-grid .menu-item {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column; /* Ensure the content stacks vertically on small screens */
+  align-items: center;
+  justify-content: center;
+}
+.menu-section .menu-grid .menu-item:hover {
+  transform: scale(1.05);
+}
+.menu-section .menu-grid .menu-item img {
+  width: 100%;
+  height: auto;
+  max-width: 150px; /* Ensure the image fits within the card */
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.menu-section .menu-grid .menu-item .menu-info {
+  text-align: center; /* Center-align the text content */
+}
+.menu-section .menu-grid .menu-item .menu-info h3 {
+  font-size: 1.5rem;
+  color: #e74c3c;
+}
+.menu-section .menu-grid .menu-item .menu-info p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+.menu-section .menu-grid .menu-item .menu-info .price {
+  font-weight: bold;
+  color: #d35400;
+  font-size: 1.2rem;
+}
+
+.location-section {
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+.location-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #d35400;
+}
+.location-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.location-section iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+}
+
+.testimonials-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: white;
+}
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #d35400;
+}
+.testimonials-section .testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+.testimonials-section .testimonials-grid blockquote {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  font-style: italic;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.testimonials-section .testimonials-grid blockquote p {
+  margin-bottom: 10px;
+}
+.testimonials-section .testimonials-grid blockquote cite {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #e74c3c;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #d35400;
+  color: white;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  .menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column width */
+  }
+  .menu-item img {
+    max-width: 100px; /* Smaller images on small screens */
+  }
+  .menu-info h3,
+  .menu-info .price {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
